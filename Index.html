@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #24292e;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        input[type="email"] {
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to GitHub!</h1>
+    <form id="registration-form">
+        <label for="email">Enter your email*</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Continue</button>
+    </form>
+    <p>Already have an account? <a href="#">Sign in</a></p>
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let email = document.getElementById('email').value;
+            console.log('User signed up with email:', email);
+        });
+    </script>
+</body>
+</html>
